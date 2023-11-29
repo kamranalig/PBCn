@@ -1,0 +1,213 @@
+@import "./../../styles/global.scss";
+
+.contentBoxWrapper {
+  width: 50%;
+  position: relative;
+  margin-top: 4rem;
+  right: 4rem;
+  @media screen and (min-width: 1920px) {
+    margin-top: 4rem;
+    right: 8rem;
+  }
+  @media screen and (min-width: 2100px) {
+    margin-top: 4rem;
+    right: 8rem;
+  }
+  .contentBox {
+    background-color: rgb(243, 250, 254);
+    color: $black;
+    width: 100%;
+    border: 4px solid $primary;
+    border-top-left-radius: 65px;
+
+    .textBox {
+      padding: 2rem;
+      color: $primary;
+      ::selection {
+        background-color: $primary;
+        color: $white;
+      }
+      h3 {
+        font-family: ShirinBold;
+        text-shadow: 0 0 1px $primary;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        @media screen and (min-width: 1920px) {
+          font-size: 1.5rem;
+        }
+        @media screen and (min-width: 2100px) {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        font-family: IntroRegularAlt;
+        @media screen and (min-width: 2100px) {
+          font-size: 1.3rem;
+        }
+        b {
+          font-family: IntroSemiBold;
+        }
+      }
+      .testimonialText {
+        font-family: IntroRegularItalic;
+      }
+      .aboutContent {
+        p {
+          margin-bottom: 1rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .nav {
+      background-color: $primary;
+      color: $white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      p {
+        font-size: 1rem;
+        font-family: IntroSemiBold;
+        text-transform: uppercase;
+        cursor: pointer;
+        @media screen and (min-width: 2100px) {
+          font-size: 1.3rem;
+        }
+        span {
+          padding-right: 0.25rem;
+        }
+      }
+    }
+  }
+  .slick-next {
+    display: inline-block;
+    background: url("./../../../public/images/Testimonial-Arrow-Next.svg")
+      center center no-repeat !important;
+    width: 50px !important;
+    height: 40px !important;
+    right: -60px !important;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-prev {
+    background: url("./../../../public/images/Testimonial-Arrow-Back.svg")
+      center center no-repeat !important;
+    width: 50px !important;
+    height: 40px !important;
+    left: -60px !important;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    &::before {
+      display: none;
+    }
+  }
+  .resumeAndContact {
+    display: none !important;
+  }
+  .dotsWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-start;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    .active {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: $primary;
+      cursor: pointer;
+      @media screen and (min-width: 1920px) {
+        width: 16px;
+        height: 16px;
+      }
+      @media screen and (min-width: 2100px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .inactive {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: rgba(26, 148, 175, 0.458);
+      cursor: pointer;
+      @media screen and (min-width: 1920px) {
+        width: 16px;
+        height: 16px;
+      }
+      @media screen and (min-width: 2100px) {
+        width: 16px;
+        height: 16px;
+      }
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .contentBoxWrapper {
+    width: 82%;
+    position: relative;
+    margin-top: 0rem;
+    right: 0rem;
+    .contentBox {
+      border-top-left-radius: 46px;
+      border: 3px solid $primary;
+
+      .textBox {
+        padding: 2rem;
+      }
+      .nav {
+        display: none !important;
+      }
+    }
+    .resumeAndContact {
+      display: block !important;
+      .resume {
+        background-color: $primary;
+        color: $white;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: IntroSemiBold;
+        width: calc(100% - 1rem + 6px);
+        text-decoration: none;
+        &:hover {
+          background-color: rgb(251, 176, 64);
+        }
+      }
+      .contact {
+        background-color: $primary;
+        color: $white;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: IntroSemiBold;
+        text-decoration: none;
+        margin-top: 2px;
+        width: calc(100% - 1rem + 6px);
+        &:hover {
+          background-color: rgb(251, 176, 64);
+        }
+      }
+    }
+  }
+}

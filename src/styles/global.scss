@@ -1,0 +1,19 @@
+$primary: #1a94af;
+$secondary: #ffde17;
+$lightgreen: #a7c572;
+$white: #ffffff;
+$black: #000000;
+$night: #373737;
+
+// media queries breakpoints variables for mobile, tablet and desktop devices max-width values (in pixels)
+
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1279px;
+
+// Responsive Variables
+$xlg: "(min-width: 1366px)";
+$lg: "(min-width: 1008px)";
+$md: "(min-width: 641px) and (max-width: 1007px)";
+$sm: "(max-width: 640px)";
+$sm-md: "(max-width: 1007px)";

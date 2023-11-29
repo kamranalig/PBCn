@@ -1,0 +1,141 @@
+@import "./styles/global.scss";
+
+@font-face {
+  font-family: RougeGorgeBoldSemiCondensed;
+  src: url(./../public/fonts/RougeGorgeBoldSemiCondensed/font.woff);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: BlackJack;
+  src: url(./../public/fonts/webfonts/2EF072_0_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroCondLightItalic;
+  src: url(./../public/fonts/webfonts/2EC53C_0_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroCondRegularItalic;
+  src: url(./../public/fonts/webfonts/2EC53C_1_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroLightAlt;
+  src: url(./../public/fonts/webfonts/2EC53C_2_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroLightItalic;
+  src: url(./../public/fonts/webfonts/2EC53C_3_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroRegularAlt;
+  src: url(./../public/fonts/webfonts/2EC53C_4_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroRegularItalic;
+  src: url(./../public/fonts/webfonts/2EC53C_5_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntroSemiBold;
+  src: url(./../public/fonts/webfonts/2EC53C_6_0.ttf) format("truetype"); /* Safari, Android, iOS */
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archer;
+  src: url(./../public/fonts/webfonts/Archer_Bold_Italic.otf) format("opentype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ShirinBold;
+  src: url(./../public/fonts/Shirin-Bold.otf) format("opentype"); /* Safari, Android, iOS */
+  font-display: swap;
+}
+@font-face {
+  font-family: IntroBold;
+  src: url(./../public/fonts/Intro-Bold.otf) format("opentype"); /* Safari, Android, iOS */
+  // font-display: swap;
+}
+
+* {
+  margin: 0;
+}
+
+.slick-slider {
+  height: 100%;
+}
+
+.carouselDotsList {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 1rem;
+  width: 100%;
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+}
+
+.slick-dots {
+  bottom: -60px !important;
+  @media screen and (max-width: 1280px) {
+    bottom: -80px !important;
+  }
+  li {
+    margin: 4px !important;
+    button {
+      &::before {
+        color: $primary !important;
+        font-size: 16px !important;
+        @media screen and (min-width: 1920px) {
+          font-size: 18px !important;
+        }
+        @media screen and (min-width: 2100px) {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+}
+
+.nextArrow {
+  background-color: yellow !important;
+}
+.slick-next {
+  background: url("../public/images/Testimonial-Arrow-Next.svg") center center no-repeat !important;
+  width: 50px !important;
+  height: 40px !important;
+  right: -60px !important;
+  &::before {
+    display: none;
+  }
+}
+
+.slick-prev {
+  background: url("../public/images/Testimonial-Arrow-Back.svg") center center no-repeat !important;
+  width: 50px !important;
+  height: 40px !important;
+  left: -60px !important;
+  &::before {
+    display: none;
+  }
+}

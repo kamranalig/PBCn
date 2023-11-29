@@ -1,0 +1,21 @@
+@import "../../styles/global.scss";
+
+.footer {
+  background-color: #393939;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: IntroRegularAlt;
+}
+
+@media (max-width: $mobile) {
+  .footer {
+    font-size: 12px;
+    background-color: $primary;
+  }
+}

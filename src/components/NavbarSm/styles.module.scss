@@ -1,0 +1,43 @@
+@import "./../../styles/global.scss";
+
+.navbarSm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: $secondary;
+  .menuListSmWrapper {
+    position: absolute;
+    top: 62px;
+    left: 1.5rem;
+    z-index: 1;
+  }
+  .menuIcon {
+    height: 100%;
+    object-fit: contain;
+    // margin-right: 40%;
+  }
+  .socialIcon {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    a {
+      display: flex;
+    }
+    .emailIcon {
+      width: 60px;
+      height: 100%;
+      object-fit: contain;
+      margin-right: 50px;
+    }
+    // .fbIcon {
+    //   width: 30px;
+    //   height: 100%;
+    //   object-fit: contain;
+    // }
+  }
+}

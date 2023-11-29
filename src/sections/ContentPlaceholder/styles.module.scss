@@ -1,0 +1,61 @@
+@import "./../../styles/global.scss";
+
+.contentWrapper {
+  height: calc(100%);
+  background-color: $white;
+  border-top-left-radius: 65px;
+  position: relative;
+  border-left: 4px solid transparent;
+  border-top-left-radius: 65px;
+  background-clip: padding-box;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -4px;
+    right: 0px;
+    background: linear-gradient($secondary, $primary, $white);
+    content: "";
+    z-index: -1;
+    border-top-left-radius: 65px;
+  }
+
+  &.contentHome {
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    background-size: 110%;
+    background-position: 180px -140px;
+    @media screen and (min-width: 1920px) {
+      background-size: 110%;
+      background-position: 200px -160px;
+    }
+    @media screen and (min-width: 2101px) {
+      background-size: 105%;
+      background-position: 240px -160px;
+    }
+    @media screen and (min-width: 2201px) {
+      background-size: 105%;
+      background-position: 250px -170px;
+    }
+    @media screen and (min-width: 2401px) {
+      background-size: 112%;
+      background-position: 240px -250px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .contentWrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,52 @@
+@import "./../../styles/global.scss";
+
+.poster {
+  display: block;
+  width: 100%;
+  .carouselItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .imageWrapper {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 61px;
+      }
+    }
+    .title {
+      background-color: $night;
+      padding: 8px;
+      font-weight: 500;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-family: IntroSemiBold;
+      font-weight: 600;
+      @media screen and (min-width: 1920px) {
+        font-size: 1.1rem;
+      }
+      @media screen and (min-width: 2100px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.posterSm {
+  display: none;
+}
+@media (max-width: $mobile) {
+  .posterSm {
+    padding: 1rem 0 82px 0; // 82px -> height of the fixed menu
+    display: block;
+    margin-top: calc(64px + 82px); // 64px -> height of the top bar with fb and email icon
+    margin-bottom: calc(64px + 82px);
+  }
+  .poster {
+    display: none;
+  }
+}

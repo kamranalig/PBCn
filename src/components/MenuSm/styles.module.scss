@@ -1,0 +1,57 @@
+@import "./../../styles/global.scss";
+
+.menuSm {
+  background-color: $primary;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 2px 1px $black;
+  width: calc(100% - 3rem);
+  position: fixed;
+
+  .menuBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menuItem {
+      //   padding: 1rem 0;
+      a {
+        color: $white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.32px;
+        text-align: right;
+        width: 100%;
+        display: inline-block;
+      }
+    }
+    .dotBullets {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $white;
+      margin: 1rem 0;
+    }
+    .secondCol {
+      .menuItem {
+        //   padding: 1rem 0;
+        a {
+          color: $white;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.5;
+          letter-spacing: 0.32px;
+          text-align: left;
+          width: 100%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .menuSm {
+      display: none;
+    }
+  }
+}

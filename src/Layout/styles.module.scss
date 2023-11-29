@@ -1,0 +1,39 @@
+@import "../styles/global.scss";
+
+@media (max-width: $desktop) {
+  .layout {
+    display: block;
+  }
+  .layoutSm {
+    display: none;
+  }
+}
+
+.layoutSm {
+  display: none;
+}
+// write media queries for tablet and desktop devices
+
+@media (max-width: $tablet) {
+  .layout {
+    display: block;
+  }
+  .layoutSm {
+    display: none;
+  }
+}
+
+// write media queries for desktop devices
+
+@media (max-width: $mobile) {
+  .layout {
+    display: none;
+  }
+  .layoutSm {
+    display: block;
+    min-height: 95vh;
+    .navbarSmWrapper {
+      height: 64px;
+    }
+  }
+}
