@@ -24,35 +24,76 @@ export const ContentBox = () => {
 
   const getAboutContent = () => {
     return (
-      <div className={styles.aboutContent}>
-        <h3>Welcome!</h3>
+      <>
+        <div className={`${styles.aboutContent} ${styles.desktop____}`}>
+          <h3>Welcome!</h3>
 
-        <p>
-          My name is Alissa Pendorf, and I&rsquo;m the proud owner of <b>Paperbird Creative, LLC</b>
-          . As both a passionate graphic designer and environmental educator, my mission is to{" "}
-          <b>promote conservation through education and creativity</b>, which often converge in
-          exciting ways.
-        </p>
-        <p>
-          Paperbird Creative offers a <b>range of creative graphic design services</b>, including
-          consultation, branding, photography, content management, copywriting, and digital
-          prepress.
-        </p>
-        <p>
-          As an <b>eco-conscious</b> designer, I work to promote the conservation of the natural
-          world through responsible design practices. And no matter how large or small the task, I
-          strive to deliver <b>intelligent</b>, <b>functional</b>, and{" "}
-          <b>aesthetically-beautiful</b> work that will last a lifetime.&nbsp;
-        </p>
-        <p>
-          Think we would work well together? <b>I&rsquo;d love to hear from you!</b>
-        </p>
-      </div>
+          <p>
+            My name is Alissa Pendorf, and I&rsquo;m the proud owner of{" "}
+            <b>Paperbird Creative, LLC</b>. As both a passionate graphic
+            designer and environmental educator, my mission is to
+            <b>promote conservation through education and creativity</b>, which
+            often converge in exciting ways.
+          </p>
+          <p>
+            Paperbird Creative offers a
+            <b>range of creative graphic design services</b>, including
+            consultation, branding, photography, content management,
+            copywriting, and digital prepress.
+          </p>
+          <p>
+            As an <b>eco-conscious</b> designer, I work to promote the
+            conservation of the natural world through responsible design
+            practices. And no matter how large or small the task, I strive to
+            deliver <b>intelligent</b>, <b>functional</b>, and{" "}
+            <b>aesthetically-beautiful</b> work that will last a lifetime.&nbsp;
+          </p>
+          <p>
+            Think we would work well together?{" "}
+            <b>I&rsquo;d love to hear from you!</b>
+          </p>
+        </div>
+        <div className={`${styles.aboutContent} ${styles.mobile____}`}>
+          <h3>Welcome!</h3>
+
+          <p>
+            My name is Alissa Pendorf, and I&rsquo;m the proud owner of{" "}
+            <b>Paperbird Creative, LLC</b>.
+          </p>
+          <p>
+            As both a passionate graphic designer and environmental educator, my
+            mission is to
+            <b>promote conservation through education and creativity</b>, which
+            often converge in exciting ways.
+          </p>
+          <p>
+            Paperbird Creative offers a
+            <b>range of creative graphic design services</b>, including
+            consultation, branding, photography, content management,
+            copywriting, and digital prepress.
+          </p>
+          <p>
+            As an <b>eco-conscious</b> designer, I work to promote the
+            conservation of the natural world through responsible design
+            practices. And no matter how large or small the task, I strive to
+            deliver <b>intelligent</b>, <b>functional</b>, and{" "}
+            <b>aesthetically-beautiful</b> work that will last a lifetime.&nbsp;
+          </p>
+          <p>Think we would work well together?</p>
+          <p>
+            <b>I&rsquo;d love to hear from you!</b>
+          </p>
+        </div>
+      </>
     );
   };
 
   const getTestimonialsContent = () => {
-    return <p className={styles.testimonialText}>{testimonials[activeTestimonialIndex].text}</p>;
+    return (
+      <p className={styles.testimonialText}>
+        {testimonials[activeTestimonialIndex].text}
+      </p>
+    );
   };
 
   // function to handle next arrow click and set the value to 0 index if its pressed for the last index
@@ -80,11 +121,15 @@ export const ContentBox = () => {
 
         <div className={styles.nav}>
           <p onClick={() => setActiveNavLink(CONSTANTS.navLink.about)}>
-            <span dangerouslySetInnerHTML={{ __html: CONSTANTS.bulletSymbol }} />
+            <span
+              dangerouslySetInnerHTML={{ __html: CONSTANTS.bulletSymbol }}
+            />
             About
           </p>
           <p onClick={() => setActiveNavLink(CONSTANTS.navLink.testimonials)}>
-            <span dangerouslySetInnerHTML={{ __html: CONSTANTS.bulletSymbol }} />
+            <span
+              dangerouslySetInnerHTML={{ __html: CONSTANTS.bulletSymbol }}
+            />
             Testimonials
           </p>
         </div>
@@ -108,15 +153,25 @@ export const ContentBox = () => {
           dots.map((_, index) => (
             <div
               key={index}
-              className={index === activeTestimonialIndex ? styles.active : styles.inactive}
+              className={
+                index === activeTestimonialIndex
+                  ? styles.active
+                  : styles.inactive
+              }
               onClick={() => setActiveTestimonialIndex(index)}
             />
           ))}
       </div>
       {activeNavLink !== "about" && (
         <>
-          <span className={styles["slick-next"]} onClick={handleNextArrowClick}></span>
-          <span className={styles["slick-prev"]} onClick={handlePreviousArrowClick}></span>
+          <span
+            className={styles["slick-next"]}
+            onClick={handleNextArrowClick}
+          ></span>
+          <span
+            className={styles["slick-prev"]}
+            onClick={handlePreviousArrowClick}
+          ></span>
         </>
       )}
     </div>

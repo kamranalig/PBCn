@@ -1,4 +1,4 @@
-import { ContentBox } from "../../components";
+import { ContentBox } from "../../components/ContentBox/ContentBox";
 import styles from "./styles.module.scss";
 import image from "../../assets/images/home/PBC-Logo-Mobile-Orange.png";
 

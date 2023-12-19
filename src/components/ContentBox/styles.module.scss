@@ -1,5 +1,7 @@
 @import "./../../styles/global.scss";
-
+.mobile____ {
+  display: none;
+}
 .contentBoxWrapper {
   width: 50%;
   position: relative;
@@ -161,6 +163,12 @@
 }
 
 @media (max-width: $mobile) {
+  .mobile____ {
+    display: block;
+  }
+  .desktop____ {
+    display: none;
+  }
   .contentBoxWrapper {
     width: 82%;
     position: relative;
@@ -169,7 +177,7 @@
     .contentBox {
       border-top-left-radius: 46px;
       border: 3px solid $primary;
-
+      text-align: center;
       .textBox {
         padding: 2rem;
       }

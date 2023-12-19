@@ -1,7 +1,8 @@
 import react, { Fragment } from "react";
 import { Col, Row } from "antd";
-import { Navbar, Sidebar } from "../components";
-import { ContentPlaceholder } from "../sections";
+import { Navbar } from "../components/Navbar/Navbar";
+import { Sidebar } from "../components/Sidebar/Sidebar";
+import { ContentPlaceholder } from "../sections/ContentPlaceholder/ContentPlaceholder";
 import NavbarSm from "../components/NavbarSm/NavbarSm";
 import styles from "./styles.module.scss";
 import ContentPlaceholderSm from "../sections/ContentPlaceholderSm/ContentPlaceholderSm";
